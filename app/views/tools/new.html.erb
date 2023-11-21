@@ -1,2 +1,13 @@
 <h1>Tools#new</h1>
 <p>Find me in app/views/tools/new.html.erb</p>
+
+<div class="container">
+  <h1>New List</h1>
+  <%= simple_form_for (@tool) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :address %>
+    <%= f.input :price %>
+    <%= f.submit "Submit list", class: "btn btn-primary" %>
+  <% end %>
+</div>

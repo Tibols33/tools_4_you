@@ -4,7 +4,7 @@ class Tool < ApplicationRecord
   has_many :bookings
 
   validates :name, presence: true
-  validates :description, presence: true, length: {minimum: 10}
+  validates :description, presence: true
   validates :address, presence: true
   validates :price, presence: true
 end

@@ -1,4 +1,4 @@
 class DashboardsController < ApplicationController
-  def view
+  def show
   end
 end

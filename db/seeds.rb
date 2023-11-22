@@ -10,6 +10,8 @@
 Tool.destroy_all
 User.destroy_all
 
+User.create!(email: "admin@hotmail.fr" , password: "azerty", password_confirmation: "azerty", first_name: "best", last_name: "admin" )
+
 User.create!(email: "jojo@hotmail.fr" , password: "baby21", password_confirmation: "baby21", first_name: "jojo", last_name: "patate" )
 
 User.create!(email: "boby@hotmail.fr" , password: "baoby21", password_confirmation: "baoby21", first_name: "boby", last_name: "patatouille" )

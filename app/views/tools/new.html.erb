@@ -3,11 +3,11 @@
 
 <div class="container">
   <h1>New List</h1>
-  <%= simple_form_for (@tool) do |f| %>
+  <%= simple_form_for @tool do |f| %>
     <%= f.input :name %>
     <%= f.input :description %>
     <%= f.input :address %>
     <%= f.input :price %>
-    <%= f.submit "Submit list", class: "btn btn-primary" %>
+    <%= f.submit "Submit Tool", class: "btn btn-primary" %>
   <% end %>
 </div>

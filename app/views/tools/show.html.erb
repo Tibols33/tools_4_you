@@ -1,2 +1,14 @@
-<h1>Tools#show</h1>
-<p>Find me in app/views/tools/show.html.erb</p>
+<div class="container">
+
+<h1 class="text-center">Mon annonce</h1>
+  <div class="border border-primary p-2 mb-5 text-center">  </div>
+  <div class="border border-primary" class="p-2">
+  <h2>  <%= @tool.name.capitalize %></h2>
+  <br><h3>Description:</h3>
+   <p><%= @tool.description %></p>
+  <p>Price: <%= @tool.price %> €/jours</p>
+  <p> Mise en ligne le <%= @tool.created_at %> </p>
+  </div>
+
+
+</div>

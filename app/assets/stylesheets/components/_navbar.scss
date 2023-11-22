@@ -8,5 +8,32 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 140px;
+}
+
+.btn-menu-login {
+  color: #fff;
+  background-color: #3865fd;
+  padding: 13px 29px;
+  border-radius: 50px;
+  font-weight: lighter;
+  transition: opacity 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-menu-login:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+.nav-link {
+  color: #001D6C;
+}
+
+.nav-link:hover {
+  color: #3865FD;
+}
+
+.nav-link {
+  margin-right: 25px;
 }

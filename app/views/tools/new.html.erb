@@ -1,5 +1,6 @@
-<h1>Tools#new</h1>
-<p>Find me in app/views/tools/new.html.erb</p>
+<div class="container">
+<h1>My new Tool</h1>
+
 
 <div class="container">
   <h1>New List</h1>
@@ -8,6 +9,8 @@
     <%= f.input :description %>
     <%= f.input :address %>
     <%= f.input :price %>
+    <%= f.input :photo, as: :file %>
     <%= f.submit "Submit Tool", class: "btn btn-primary" %>
   <% end %>
+</div>
 </div>

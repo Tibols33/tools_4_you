@@ -1,4 +1,17 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+<div class="scrolling-wrapper">
+  <div class="menu-item">Bricolage</div>
+  <div class="menu-item">Jardinage</div>
+  <div class="menu-item">Peinture</div>
+  <div class="menu-item">Menuiserie</div>
+  <div class="menu-item">Nettoyage</div>
+  <div class="menu-item">Bricolage</div>
+  <div class="menu-item">Jardinage</div>
+  <div class="menu-item">Peinture</div>
+  <div class="menu-item">Menuiserie</div>
+  <div class="menu-item">Nettoyage</div>
+</div>
+
+<div class="banner" style="background-image: url('<%= asset_path('1.png') %>');">
   <div class="container">
     <h1>La <strong>location d'outils</strong> entre <strong>particuliers</strong>!</h1>
     <p>blablabla</p>
@@ -6,15 +19,19 @@
     <a class="btn btn-flat" href="#">Mettre en location mes outils</a>
   </div>
 </div>
-<h1>Tools</h1>
 
+<div class="text-center">
+  <h1>Tools</h1>
+</div>
+
+<% link_to "All tools", tools_path%>
 
 <div class="cards">
 <% @tools.each do |tool| %>
 <div class="row align-items-center">
     <div class="col">
     <div class="card-trip">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+      <%= image_tag "1.png" %>
       <div class="card-trip-infos">
         <div>
         <h2><%= link_to tool.name, tool_path(tool) %></h2>

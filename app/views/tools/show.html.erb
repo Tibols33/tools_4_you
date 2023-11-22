@@ -1,14 +1,21 @@
 <div class="container">
 
-<h1 class="text-center">Mon annonce</h1>
-  <div class="border border-primary p-2 mb-5 text-center">  </div>
+<h1 class="text-center"> <%= @tool.name.capitalize %></h1>
+  <div class="border border-primary p-2 mb-5 text-center">
+
+  <% if @tool.photo.attached? %>
+  <%= cl_image_tag @tool.photo.key, width: 400 %>
+  <% end %>
+
+  </div>
   <div class="border border-primary" class="p-2">
-  <h2>  <%= @tool.name.capitalize %></h2>
+  <h2>
   <br><h3>Description:</h3>
    <p><%= @tool.description %></p>
   <p>Price: <%= @tool.price %> €/jours</p>
+
+  <%= @tool.description %>
   <p> Mise en ligne le <%= @tool.created_at %> </p>
   </div>
-
 
 </div>

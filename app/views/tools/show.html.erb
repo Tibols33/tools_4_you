@@ -1,19 +1,76 @@
-<div class="container">
+<div class="box-show">
+      <div class="group">
+        <div class="overlap">
+          <p class="description">
+            <span class="text-wrapper"
+              >All hand-made with natural soy wax, Candleaf is made for your pleasure moments.  </span
+            >
+          </p>
+          <div class="details">
+            <div class="overlap-group">
+                 <p class="text-description-show"><%= @tool.description  %></p>
 
-<h1 class="text-center"> <%= @tool.name.capitalize %></h1>
-  <div class="border border-primary p-2 mb-5 text-center">
+            </div>
+          </div>
+          <div class="big-button">
+            <div class="label">
+              <div class="div">+ Add to cart</div>
+            </div>
+          </div>
+          <div class="overlap-2">
+            <div class="quantity">
+              <div class="quantity-2">
+                <div class="input">
+                  <div class="placeholder-wrapper">
+                    <p class="placeholder">
+                      <span class="text-wrapper-5">+</span>
+                      <span class="text-wrapper-3">&nbsp;&nbsp; 1&nbsp;&nbsp; </span>
+                      <span class="text-wrapper-6">-</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="description-2">Quantity</div>
+              </div>
+            </div>
+            <div class="overlap-3">
 
-  <% if @tool.photo.attached? %>
-  <%= cl_image_tag @tool.photo.key, width: 400 %>
-  <% end %>
 
-  </div>
-  <div class="border border-primary" class="p-2">
-  <h2>
-  <br><h3>Description:</h3>
-   <p><%= @tool.description  %></p>
+                <p class="price"><%= @tool.price %> €/day</p>
 
-  <p>Price: <%= @tool.price %> €/jours</p>  </div>
+              <div class="subscription">
+                <div class="subscription-2">
+                  <div class="subscribe">
+                    <div class="overlap-4">
+                      <p class="p">
+                        <span class="text-wrapper-7"
+                          >Subscribe now and get the 10% of discount on every recurring order.&nbsp;&nbsp;The discount
+                          will be applied at checkout.</span
+                        >
+                        <span class="text-wrapper-8">&nbsp;</span>
+                        <span class="text-wrapper-9">See details</span>
+                      </p>
+                      <div class="drop-down">
+                        <div class="overlap-group-2">
+                          <img class="chevron-down" src="img/chevron-down.svg" />
+                          <div class="label-2">4 weeks</div>
+                          <div class="bg"></div>
+                        </div>
+                      </div>
+                      <div class="subscribe-2">Subscribe and delivery every</div>
+                      <div class="round-checkbox"></div>
+                    </div>
+                  </div>
+                  <div class="one-time">
+                    <div class="label-3">One time purchase</div>
+                    <div class="round-checkbox-2"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+ 
 <div style="width: 100%; height: 600px;"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
@@ -21,13 +78,17 @@
 
 
 
-  <p> Mise en ligne le : <%= @tool.created_at %> </p>
 
 
-  <%= link_to "access Tools", new_tool_booking_path(@tool) %>
 
-
+          <div class="image">
+  <% if @tool.photo.attached? %>
+  <%= cl_image_tag @tool.photo.key, width: "500px" %>
+  <% end %>
   </div>
 
+        </div>
+      </div>
+    </div>
+
 </div>
-<p> Mise en ligne le : <%= @tool.created_at %> </p>

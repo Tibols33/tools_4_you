@@ -1,2 +1,15 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
+<div class="container">
+<h1 class = "text-center mt-5 mb-5">New booking</h1>
+
+<div class="container">
+  <h1>Booking</h1>
+  <h2><%=@tool.name%></h2>
+
+  <%= simple_form_for [@tool, @booking] do |f| %>
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+    <%= f.submit "Submit new booking", class: "btn-menu-login mt-3" %>
+    <%= render "shared/flashes" %>
+  <% end %>
+</div>
+</div>

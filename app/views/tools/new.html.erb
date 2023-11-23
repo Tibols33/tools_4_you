@@ -2,8 +2,8 @@
       <div class="group">
         <div class="overlap-group2">
           <div class="overlap">
-            <p class="text-wrapper">Earn money with your tools !</p>
-            <p class="div">Rent your tools on Rent 4 You</p>
+            <p class="text-wrapper2">Earn money with your tools !</p>
+            <p class="div2">Rent your tools on Rent 4 You</p>
           </div>
             <%= link_to "", class: "img-banner2" do %>
             <%= image_tag "img-index.png" %>
@@ -12,7 +12,11 @@
       </div>
     </div>
 
-  <h1>New List</h1>
+<div class="space-newtool"></div>
+
+<div  class="container-newtool2">
+<div class="container-login2">
+  <p class="tools-text-center">🧑🏻‍🔧 New Tool 🛠️</p>
   <%= simple_form_for @tool do |f| %>
     <%= f.input :name %>
     <%= f.input :description %>

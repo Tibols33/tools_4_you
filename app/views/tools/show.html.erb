@@ -16,12 +16,14 @@
 
   <p> Mise en ligne le : <%= @tool.created_at %> </p>
 
-
 <div style="width: 100%; height: 600px;"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['pk.eyJ1Ijoicm9vbWludG91Y2giLCJhIjoiY2w0cGpzd3MzMGZ3YzNrbW4zNm95dGJxMiJ9.fS-fIL9bIgSfd3yUEKdBuQ'] %>">
 </div>
+
+  <%= link_to "access Tools", new_tool_booking_path(@tool) %>
+
 
   </div>
 </div>

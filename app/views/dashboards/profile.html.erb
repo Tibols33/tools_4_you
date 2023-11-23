@@ -1,7 +1,8 @@
 <div class="container">
+ <h1 class="tools-text-center">My Tools</h1>
   <div class="cards">
 
-  <h1 class="text-center">My Tools</h1>
+
 
   <% @tools.each do |tool| %>
   <div class="row align-items-center">
@@ -49,21 +50,20 @@
    <h1 class="text-center">My Requests</h1>
 
    <div class="cards">
-    <% @booked_tools.each do |booked_tool| %>
+    <% @my_requests.each do |booking| %>
     <div class="row align-items-center">
         <div class="col">
         <div class="card-trip">
-          <% if booked_tool.photo.attached? %>
-          <%= cl_image_tag booked_tool.photo.key, width: 400 %>
+
+          <% if booking.tool.photo.attached? %>
+          <%= cl_image_tag booking.tool.photo.key, width: 400 %>
           <% end %>
           <div class="card-trip-infos">
             <div>
-            <h2><%= booked_tool.name%></h2>
-            <% booked_tool.bookings.each do |booking|%>
+            <h2><%= booking.tool.name%></h2>
             <p><%= booking.start_date%><%= booking.end_date%></p>
-            <% end %>
           </div>
-          <h2 class="card-trip-pricing"><%= booked_tool.price %>€/day</h2>
+          <h2 class="card-trip-pricing"><%= booking.tool.price %>€/day</h2>
           </div>
       </div>
       </div>

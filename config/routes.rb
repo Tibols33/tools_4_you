@@ -15,5 +15,5 @@ Rails.application.routes.draw do
   end
     resources :bookings, only: [:delete, :update, :edit, :show, :index]
 
-    resources :dashboards, only: [:show]
+  get '/profile', to: "dashboards#profile", as: :profile
 end

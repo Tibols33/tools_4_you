@@ -4,11 +4,11 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   def after_sign_up_path_for(resource)
-    dashboard_path(current_user) # <- Path you want to redirect the user to.
+    tools_path # <- Path you want to redirect the user to.
   end
 
   def after_sign_in_path_for(resource)
-    dashboard_path(current_user) # <- Path you want to redirect the user to.
+    tools_path # <- Path you want to redirect the user to.
   end
 
   def configure_permitted_parameters

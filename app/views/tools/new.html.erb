@@ -1,8 +1,17 @@
-<div class="container">
-<h1 class = "text-center mt-5 mb-5">My new Tool</h1>
+<div class="box">
+      <div class="group">
+        <div class="overlap-group2">
+          <div class="overlap">
+            <p class="text-wrapper">Earn money with your tools !</p>
+            <p class="div">Rent your tools on Rent 4 You</p>
+          </div>
+            <%= link_to "", class: "img-banner2" do %>
+            <%= image_tag "img-index.png" %>
+            <% end %>
+        </div>
+      </div>
+    </div>
 
-
-<div class="container">
   <h1>New List</h1>
   <%= simple_form_for @tool do |f| %>
     <%= f.input :name %>

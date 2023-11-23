@@ -1,29 +1,25 @@
-<h1>Tools#index</h1>
-
-
-
-<%= link_to "add Tool", new_tool_path %>
-
-<ul>
-<% @tools.each do |tool| %>
-<li>
-<h3><%= link_to tool.name, tool_path(tool) %></h3>
-</li>
-<% end %>
-</ul>
-
-
+<div class="banner" style="background-image: url('<%= asset_path('background-to-change.png') %>');">
+  <div class="container">
+    <p class="banner-text-center">All tools on Rent 4 You</p>
+  </div>
+</div>
 
 <div class="cards">
 <% @tools.each do |tool| %>
 <div class="row align-items-center">
     <div class="col">
     <div class="card-trip">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+
+      <% if tool.photo.attached? %>
+      <%= cl_image_tag tool.photo.key, width: 400 %>
+      <% end %>
+
+
+
       <div class="card-trip-infos">
         <div>
         <h2><%= link_to tool.name, tool_path(tool) %></h2>
-        <p><%= tool.description %></p>
+        <p><%= tool.description.truncate(150) %></p>
       </div>
        <h2 class="card-trip-pricing"><%= tool.price %>€</h2>
       </div>
@@ -32,3 +28,21 @@
 </div>
      <% end %>
    </div>
+
+
+
+
+ <div class="box">
+      <div class="group">
+        <div class="overlap-group">
+          <div class="overlap">
+            <p class="text-wrapper">Earn money with your tools !</p>
+            <p class="div">Rent your tools on Rent 4 You</p>
+          </div>
+            <%= link_to "Rent my owner tools", new_tool_path, class: "text-wrapper-2" %>
+            <%= link_to "", class: "img-banner2" do %>
+            <%= image_tag "img-index.png" %>
+            <% end %>
+        </div>
+      </div>
+    </div>

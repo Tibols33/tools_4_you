@@ -23,3 +23,24 @@
 <%= link_to "All tools", tools_path %>
 </div>
 </div>
+
+
+<div class="container">
+<div class="cards">
+<% @tools.each do |tool| %>
+<div class="row align-items-center">
+    <div class="col">
+    <div class="card-trip">
+      <%= image_tag "img-tools1" %>
+      <div class="card-trip-infos">
+        <div>
+        <h2><%= link_to tool.name, tool_path(tool) %></h2>
+        <p><%= tool.description.truncate(150) %></p>
+      </div>
+       <h2 class="card-trip-pricing"><%= tool.price %>€/day</h2>
+      </div>
+  </div>
+  </div>
+</div>
+     <% end %>
+   </div>

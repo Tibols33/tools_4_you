@@ -1,11 +1,17 @@
 class ToolsController < ApplicationController
+
+  skip_before_action :authenticate_user!, only: [:show]
+
   def index
     @tools = Tool.all
   end
 
   def show
     @tool = Tool.find(params[:id])
-    @tool.user = current_user
+    @markers = [{
+        lat: @tool.latitude,
+        lng: @tool.longitude
+      }]
   end
 
   def new

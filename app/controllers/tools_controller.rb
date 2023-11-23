@@ -1,11 +1,11 @@
 class ToolsController < ApplicationController
-
   def index
     @tools = Tool.all
   end
 
   def show
     @tool = Tool.find(params[:id])
+    @tool.user = current_user
   end
 
   def new
@@ -23,13 +23,22 @@ class ToolsController < ApplicationController
   end
 
   def edit
+    @tool = Tool.find(params[:id])
   end
 
   def update
+    @tool = Tool.find(params[:id])
+    @tool.user = current_user
+    if @tool.update(tool_params)
+      redirect_to tool_path(@tool.id)
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy
     @tool = Tool.find(params[:id])
+    @tool.user = current_user
     @tool.destroy
     redirect_to tools_path, status: :see_other
   end

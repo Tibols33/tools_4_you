@@ -1,4 +1,5 @@
 class DashboardsController < ApplicationController
-  def show
+  def profile
+    @tools = current_user.tools
   end
 end

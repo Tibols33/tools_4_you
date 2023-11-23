@@ -12,18 +12,22 @@
   <h2>
   <br><h3>Description:</h3>
    <p><%= @tool.description  %></p>
-  <p>Price: <%= @tool.price %> €/day</p>
 
-  <p> Mise en ligne le : <%= @tool.created_at %> </p>
-
+  <p>Price: <%= @tool.price %> €/jours</p>  </div>
 <div style="width: 100%; height: 600px;"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['pk.eyJ1Ijoicm9vbWludG91Y2giLCJhIjoiY2w0cGpzd3MzMGZ3YzNrbW4zNm95dGJxMiJ9.fS-fIL9bIgSfd3yUEKdBuQ'] %>">
-</div>
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
+
+
+  <p> Mise en ligne le : <%= @tool.created_at %> </p>
+
 
   <%= link_to "access Tools", new_tool_booking_path(@tool) %>
 
 
   </div>
+
 </div>
+<p> Mise en ligne le : <%= @tool.created_at %> </p>

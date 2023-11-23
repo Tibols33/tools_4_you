@@ -300,6 +300,8 @@
 .btn-all-tools {
   display: flex;
   justify-content: center;
+  margin-bottom: 100px;
+
 }
 
 .btn-all-tools a {
@@ -334,13 +336,22 @@
   top: 0;
   left: 0;
 }
-
+/* */
 .box .overlap-group {
   position: relative;
   width: 1512px;
   height: 342px;
   background-color: #f3f3ff;
   margin-top: 100px;
+  margin-bottom: 150px;
+}
+
+.box .overlap-group2 {
+  position: relative;
+  width: 1512px;
+  height: 342px;
+  background-color: #f3f3ff;
+  margin-top: 0px;
   margin-bottom: 150px;
 }
 

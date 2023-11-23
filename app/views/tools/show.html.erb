@@ -15,5 +15,8 @@
   <p>Price: <%= @tool.price %> €/jours</p>
 
   <p> Mise en ligne le : <%= @tool.created_at %> </p>
+
+  <%= link_to "access Tools", new_tool_booking_path(@tool) %>
+
   </div>
 </div>

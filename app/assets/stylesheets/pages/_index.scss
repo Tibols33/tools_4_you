@@ -1,2 +1,300 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.img-banner img {
+  height: 600px;
+}
+
+.header {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.header .div {
+  background-color: #ffffff;
+  width: 1440px;
+  height: 839px;
+  position: relative;
+}
+
+.header .overlap-group {
+  position: absolute;
+  width: 187px;
+  height: 58px;
+  top: 40px;
+  left: 1183px;
+  background-color: #493aff;
+  border-radius: 50px;
+}
+
+.header .text-wrapper {
+  position: absolute;
+  top: 17px;
+  left: 60px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #06113c;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.header .frame {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  position: absolute;
+  top: 47px;
+  left: 68px;
+}
+
+.header .text-wrapper-2 {
+  position: relative;
+  width: fit-content;
+  margin-top: -0.88px;
+  font-family: "Faktum Test-Bold", Helvetica;
+  font-weight: 700;
+  color: #06113c;
+  font-size: 35.2px;
+  letter-spacing: -1.41px;
+  line-height: normal;
+}
+
+.header .navbar {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 40px;
+  position: absolute;
+  top: 57px;
+  left: 501px;
+}
+
+.header .text-wrapper-3 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #06113c;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.header .overlap {
+  position: absolute;
+  width: 1267px;
+  height: 578px;
+  top: 52px;
+  left: 100px;
+}
+
+.header .btn-rent-a-tool {
+  position: absolute;
+  width: 235px;
+  height: 66px;
+  top: 386px;
+  left: 0;
+  background-color: #493aff;
+  color: #fff!important;
+  border-radius: 50px;
+}
+
+.header .btn-rent-a-tool:hover {
+  background-color: #02206d;
+}
+
+.header .text-wrapper-4 {
+  position: absolute;
+  top: 20px;
+  left: 63px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+
+
+.header .p {
+  position: absolute;
+  width: 596px;
+  top: 57px;
+  left: 0;
+  font-family: "Faktum Test-Bold", Helvetica;
+  font-weight: 700;
+  color: #06113c;
+  font-size: 70.1px;
+  letter-spacing: -2.8px;
+  line-height: 63.1px;
+}
+
+.header .img-banner {
+  position: absolute;
+  width: 770px;
+  height: 578px;
+  top: 0;
+  left: 497px;
+  object-fit: cover;
+}
+
+.header .header-description {
+  position: absolute;
+  width: 488px;
+  top: 334px;
+  left: 100px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #4b5371;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 28px;
+}
+
+.header .text-wrapper-5 {
+  position: absolute;
+  top: 568px;
+  left: 292px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #06113c;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+}
+
+.header .text-wrapper-6 {
+  position: absolute;
+  top: 538px;
+  left: 292px;
+  font-family: "Faktum Test-Bold", Helvetica;
+  font-weight: 700;
+  color: #06113c;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+}
+
+.header .text-wrapper-7 {
+  position: absolute;
+  top: 457px;
+  left: 378px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #06113c;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.header .text-wrapper-7:hover {
+  color:#493aff;
+}
+
+.header .avatars-header {
+  position: absolute;
+  width: 155px;
+  height: 73px;
+  top: 493px;
+  left: 100px;
+}
+
+.header .img-1 img {
+  left: 0;
+  position: absolute;
+  width: 73px;
+  height: 73px;
+  top: 35px;
+  object-fit: cover;
+}
+
+.header .img-2 img {
+  left: 38px;
+  position: absolute;
+  width: 73px;
+  height: 73px;
+  top: 35px;
+  object-fit: cover;
+}
+
+.header .img-3 img {
+  left: 82px;
+  position: absolute;
+  width: 73px;
+  height: 73px;
+  top: 35px;
+  object-fit: cover;
+}
+
+/* Centrer titre */
+.tools-text-center {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+  font-family: "Faktum Test-Bold", Helvetica;
+  font-weight: 700;
+  color: #06113c;
+  font-size: 50px;
+}
+
+/* Menu défilant */
+.scrolling-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: auto;
+  white-space: nowrap;
+
+.menu-item {
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #493aff;
+    border-radius: 5px;
+    color: #493aff;
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+
+.menu-item:hover {
+  background-color: #493aff;
+  color: #fff;
+  }
+}
+
+.btn-all-tools {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-all-tools a {
+
+  width: 235px;
+  height: 66px;
+  background-color: #493aff;
+  color: #fff !important;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin-top: 25px;
+}
+
+.btn-all-tools a:hover {
+  background-color: #06113c;
+}

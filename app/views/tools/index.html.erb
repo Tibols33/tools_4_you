@@ -1,0 +1,34 @@
+<h1>Tools#index</h1>
+
+
+
+<%= link_to "add Tool", new_tool_path %>
+
+<ul>
+<% @tools.each do |tool| %>
+<li>
+<h3><%= link_to tool.name, tool_path(tool) %></h3>
+</li>
+<% end %>
+</ul>
+
+
+
+<div class="cards">
+<% @tools.each do |tool| %>
+<div class="row align-items-center">
+    <div class="col">
+    <div class="card-trip">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+      <div class="card-trip-infos">
+        <div>
+        <h2><%= link_to tool.name, tool_path(tool) %></h2>
+        <p><%= tool.description %></p>
+      </div>
+       <h2 class="card-trip-pricing"><%= tool.price %>€</h2>
+      </div>
+  </div>
+  </div>
+</div>
+     <% end %>
+   </div>

@@ -1,2 +1,73 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+ <div class="header">
+      <div class="div">
+        <div class="overlap">
+          <div class="btn-rent-a-tool">
+            <div class="text-wrapper-4">🛠️ Rent a tool</div>
+          </div>
+            <p class="p">Rental of tools between individuals</p>
+
+          <%= link_to "", class: "img-banner" do %>
+           <%= image_tag "header-homepage.jpg" %>
+          <% end %>
+
+          </div>
+          <p class="header-description">
+            Rent a tool for the day or earn money from your tools
+          </p>
+          <div class="text-wrapper-5">users worldwide</div>
+          <div class="text-wrapper-6">4K+</div>
+          <div class="text-wrapper-7">Rent my tools</div>
+          <div class="avatars-header">
+            <%= link_to "", class: "img-1" do %>
+              <%= image_tag "avatar1.png" %>
+            <% end %>
+            <%= link_to "", class: "img-2" do %>
+              <%= image_tag "avatar2.png" %>
+            <% end %>
+            <%= link_to "", class: "img-3" do %>
+              <%= image_tag "avatar3.png" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div class="tools-text-center">
+  <p>Tools<p>
+</div>
+
+<div class="scrolling-wrapper">
+  <div class="menu-item">Bricolage</div>
+  <div class="menu-item">Jardinage</div>
+  <div class="menu-item">Peinture</div>
+  <div class="menu-item">Menuiserie</div>
+  <div class="menu-item">Nettoyage</div>
+  <div class="menu-item">Bricolage</div>
+  <div class="menu-item">Jardinage</div>
+  <div class="menu-item">Peinture</div>
+  <div class="menu-item">Menuiserie</div>
+  <div class="menu-item">Nettoyage</div>
+</div>
+
+<div class="cards">
+<% @tools.each do |tool| %>
+<div class="row align-items-center">
+    <div class="col">
+    <div class="card-trip">
+      <%= image_tag "img-tools1" %>
+      <div class="card-trip-infos">
+        <div>
+        <h2><%= link_to tool.name, tool_path(tool) %></h2>
+        <p><%= tool.description.truncate(150) %></p>
+      </div>
+       <h2 class="card-trip-pricing"><%= tool.price %>€</h2>
+      </div>
+  </div>
+  </div>
+</div>
+     <% end %>
+   </div>
+
+<div class="btn-all-tools">
+<%= link_to "All tools", tools_path %>
+</div>

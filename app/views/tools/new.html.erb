@@ -1,0 +1,16 @@
+<div class="container">
+<h1 class = "text-center mt-5 mb-5">My new Tool</h1>
+
+
+<div class="container">
+  <h1>New List</h1>
+  <%= simple_form_for @tool do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :address %>
+    <%= f.input :price %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit "Submit Tool", class: "btn-menu-login mt-3" %>
+  <% end %>
+</div>
+</div>

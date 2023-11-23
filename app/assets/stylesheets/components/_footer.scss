@@ -1,0 +1,265 @@
+.footer {
+  position: relative;
+  margin-top: 150px;
+  height: 665px;
+  background-color: #fff;
+}
+
+.footer .divider {
+  position: absolute;
+  width: 1440px;
+  height: 1px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.logo .group img {
+height: 60px;
+}
+
+
+.footer .footer-bottom {
+  position: absolute;
+  width: 1241px;
+  height: 1px;
+  top: 689px;
+  left: 99px;
+}
+
+.footer .element {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 26.24px;
+  top: 150px;
+  left: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .logo {
+  position: relative;
+  width: 125.95px;
+  height: 41.71px;
+  margin-right: -2px;
+}
+
+.footer .text-wrapper {
+  position: absolute;
+  top: 4px;
+  left: 51px;
+  font-family: "DM Sans-Bold", Helvetica;
+  font-weight: 700;
+  color: rgba(23, 15, 73, 1);
+  font-size: 32.2px;
+  letter-spacing: 0;
+  line-height: 34px;
+  white-space: nowrap;
+}
+
+.footer .group {
+  position: absolute;
+  width: 39px;
+  height: 42px;
+  top: 90px;
+  left: 0;
+}
+
+.footer .footer-middle {
+  position: absolute;
+  width: 1239px;
+  height: 284px;
+  top: 220px;
+  left: 100px;
+}
+
+.footer .footer-column {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.footer .footer-title {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "DMSans-Bold", Helvetica;;
+  font-weight: 700;
+  color: rgba(23, 15, 73, 1);
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+.footer .footer-links {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.footer .link {
+  display: inline-flex;
+  align-items: flex-start;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.footer .master-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.footer .div {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  color: rgba(111, 108, 144, 1);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.footer .footer-column-2 {
+  left: 219px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  position: absolute;
+  top: 0;
+}
+
+.footer .link-2 {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.footer .footer-column-3 {
+  left: 424px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  position: absolute;
+  top: 0;
+}
+
+.footer .footer-column-4 {
+  left: 880px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  position: absolute;
+  top: 0;
+}
+
+.footer .element-px {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.footer .description {
+  position: relative;
+  width: 358.36px;
+  margin-top: -1px;
+  font-family: "DMSans-Regular", Helvetica;
+  font-weight: 400;
+  color: rgba(111, 108, 144, 1);
+  font-size: 18px;
+  line-height: 30px;
+  font-style: normal;
+}
+
+.footer .element-2 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.footer .input-text {
+  position: relative;
+  width: 359px;
+  height: 68px;
+}
+
+.footer .master-input-text {
+  height: 68px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 108px;
+  border: 1px solid;
+  border-color: rgba(217, 219, 233, 1);
+}
+
+.footer .input-left {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  top: 24px;
+  left: 22px;
+}
+
+.footer .input-placeholder {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  color: rgba(111, 108, 144, 1);
+  white-space: nowrap;
+}
+
+.footer .button-text {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  color: #fff!important;
+  text-align: center;
+  white-space: nowrap;
+  all: unset;
+  box-sizing: border-box;
+  gap: 4px;
+  padding: 18px 24px;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: rgba(74, 58, 255, 1);
+  border-radius: 76px;
+}
+
+.footer .social-media {
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  position: absolute;
+  top: 613px;
+  left: 1163px;
+}
+
+.footer .social-media-icon img{
+  height: 30px;
+}
+
+.footer .copyright {
+  position: absolute;
+  top: 612px;
+  left: 110px;
+  color: rgba(111, 108, 144, 1);
+  font-size: 15px;
+  white-space: nowrap;
+}

@@ -1,5 +1,10 @@
-<div class="container">
-<h2>Log in</h2>
+<%# <div class="background-login">
+    <%= link_to "", class: "img-banner" do %>
+      <%# <%= image_tag "header-homepage.jpg" %>
+    <%# <% end %>
+
+<div class="container-login">
+<h2 class="login-title">Log in</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
@@ -27,4 +32,5 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+  </div>
 </div>

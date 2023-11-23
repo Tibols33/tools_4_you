@@ -5,12 +5,14 @@ class BookingsController < ApplicationController
   end
 
   def create
+
     @tool = Tool.find(params[:tool_id])
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.tool = @tool
+    @booking.status = "waiting"
     if @booking.save
-      redirect_to profile_path(@profile)
+      redirect_to profile_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -38,6 +40,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:name, :start_date, :end_date)
+    params.require(:booking).permit(:start_date, :end_date)
   end
 end

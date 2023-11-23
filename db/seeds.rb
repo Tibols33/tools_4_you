@@ -78,7 +78,7 @@ tool8.save
 
 user9 = User.create!(email: "benoit@hotmail.fr", password: "baby21", password_confirmation: "baby21", first_name: "Benoit", last_name: "LESCUR" )
 
-file = File.open("app/assets/images/casque.jpg")
+file = File.open("app/assets/images/tronconneuse.jpg")
 
 tool9 = Tool.new(name: "Tronçonneuse", description: "Loue tronçonneuse, réservation minimal pour 1 semaine, chaine en bon état.", address: "1, 36160 Vijon", price: 4.00, user: user9  )
 tool9.photo.attach(io: file, filename: "tronconneuse.jpg", content_type: "image/jpg")

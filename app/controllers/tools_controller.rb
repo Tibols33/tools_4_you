@@ -5,7 +5,10 @@ class ToolsController < ApplicationController
 
   def show
     @tool = Tool.find(params[:id])
-    @tool.user = current_user
+    @markers = [{
+        lat: @tool.latitude,
+        lng: @tool.longitude
+      }]
   end
 
   def new

@@ -36,7 +36,7 @@ class ToolsController < ApplicationController
     @tool = Tool.find(params[:id])
     @tool.user = current_user
     if @tool.update(tool_params)
-      redirect_to tool_path(@tool.id)
+      redirect_to profile_path
     else
       render :edit, status: :unprocessable_entity
     end
@@ -46,7 +46,7 @@ class ToolsController < ApplicationController
     @tool = Tool.find(params[:id])
     @tool.user = current_user
     @tool.destroy
-    redirect_to tools_path, status: :see_other
+    redirect_to profile_path, status: :see_other
   end
 
   private

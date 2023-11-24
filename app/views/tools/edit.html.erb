@@ -1,2 +1,29 @@
-<h1>Tools#edit</h1>
-<p>Find me in app/views/tools/edit.html.erb</p>
+<div class="box">
+      <div class="group">
+        <div class="overlap-group2">
+          <div class="overlap">
+            <p class="text-wrapper2">Earn money with your tools !</p>
+            <p class="div2">Rent your tools on Rent 4 You</p>
+          </div>
+            <%= link_to "", class: "img-banner2" do %>
+            <%= image_tag "image-index2.png" %>
+            <% end %>
+        </div>
+      </div>
+    </div>
+
+<div class="space-newtool"></div>
+
+<div  class="container-newtool2">
+<div class="container-login2">
+  <p class="tools-text-center">🧑🏻‍🔧 Update Your Tool 🛠️</p>
+  <%= simple_form_for @tool do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :address %>
+    <%= f.input :price %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit "Submit Tool", class: "btn-menu-login mt-3" %>
+  <% end %>
+</div>
+</div>

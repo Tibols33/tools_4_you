@@ -17,8 +17,10 @@
           <p><%= tool.description.truncate(150) %></p>
         </div>
         <h2 class="card-trip-pricing"><%= tool.price %>€/day</h2>
+        <%= link_to "Update", edit_tool_path(tool) %>
+         <%= link_to "Delete", tool_path(tool), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
         </div>
-    </div>
+      </div>
     </div>
   </div>
       <% end %>
@@ -31,6 +33,7 @@
     <% @bookings.each do |booking| %>
     <div class="row align-items-center">
         <div class="col">
+
         <div class="card-trip">
           <% if booking.tool.photo.attached? %>
           <%= cl_image_tag booking.tool.photo.key, width: 400 %>
@@ -44,9 +47,9 @@
             <h2 class="card-trip-pricing">Total : <%=(booking.end_date - booking.start_date) * booking.tool.price%>€/day</h2>
             <%= link_to "Valid this request", edit_booking_path(booking) %>
 
+
           </div>
-      </div>
-      </div>
+        </div>
     </div>
         <% end %>
    </div>

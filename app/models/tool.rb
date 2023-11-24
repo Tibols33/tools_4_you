@@ -2,7 +2,7 @@ class Tool < ApplicationRecord
   has_one_attached :photo
   belongs_to :user
   has_many :users, through: :bookings
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
 
   validates :name, presence: true
   validates :description, presence: true, length: { minimum: 10 }

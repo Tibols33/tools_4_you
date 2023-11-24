@@ -1,20 +1,17 @@
 class BookingsController < ApplicationController
-  def new
-    @tool = Tool.find(params[:tool_id])
-    @booking = Booking.new
-  end
 
   def create
-
     @tool = Tool.find(params[:tool_id])
     @booking = Booking.new(booking_params)
+    @booking.start_date = booking_params[:start_date].split('to')[0].strip
+    @booking.end_date = booking_params[:start_date].split('to')[1].strip
     @booking.user = current_user
     @booking.tool = @tool
     @booking.status = "waiting"
     if @booking.save
       redirect_to profile_path
     else
-      render :new, status: :unprocessable_entity
+      render 'tools/show', status: :unprocessable_entity
     end
   end
 

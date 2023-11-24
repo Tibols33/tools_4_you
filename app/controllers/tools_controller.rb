@@ -8,6 +8,7 @@ class ToolsController < ApplicationController
 
   def show
     @tool = Tool.find(params[:id])
+    @booking = Booking.new
     @markers = [{
         lat: @tool.latitude,
         lng: @tool.longitude

@@ -8,6 +8,9 @@ class ToolsController < ApplicationController
 
   def show
     @tool = Tool.find(params[:id])
+    @booking_dates = Booking.where(tool: @tool).pluck(:start_date, :end_date).map do |dates|
+      { from: dates[0], to: dates[1] }
+    end
     @booking = Booking.new
     @markers = [{
         lat: @tool.latitude,

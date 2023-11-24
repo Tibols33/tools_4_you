@@ -1,89 +1,112 @@
-<div class="container">
- <h1 class="tools-text-center">All my tools</h1>
-  <div class="cards">
+<div class="container-dashboard-background">
+  <div class="card-dashboard">
+   <h2 class="title-dashboard">👋🏻 Hello <%= current_user.first_name %>, welcome to your dashboard</h2>
+ <h1 class="tools-text-center">🛠️ All my tools</h1>
 
 
 
-  <% @tools.each do |tool| %>
-  <div class="row align-items-center">
-      <div class="col">
-      <div class="card-trip">
+<div class="cards-dashboard">
+  <div class="row">
+    <% @tools.each do |tool| %>
+      <div class="col-md-4">
+        <div class="card-trip">
           <% if tool.photo.attached? %>
-          <%= cl_image_tag tool.photo.key, width: 400 %>
-          <% end %>
-        <div class="card-trip-infos">
-          <div>
-          <h2><%= link_to tool.name, tool_path(tool) %></h2>
-          <p><%= tool.description.truncate(150) %></p>
-        </div>
-        <h2 class="card-trip-pricing"><%= tool.price %>€/day</h2>
-        <%= link_to "Update", edit_tool_path(tool) %>
-         <%= link_to "Delete", tool_path(tool), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-        </div>
-      </div>
-    </div>
-  </div>
-      <% end %>
-   </div>
-
-
-  <h1 class="tools-text-center">Manage your tool</h1>
-
-  <div class="cards">
-    <% @bookings.each do |booking| %>
-    <div class="row align-items-center">
-        <div class="col">
-
-        <div class="card-trip">
-          <% if booking.tool.photo.attached? %>
-          <%= cl_image_tag booking.tool.photo.key, width: 400 %>
+            <%= cl_image_tag tool.photo.key, width: 400 %>
           <% end %>
           <div class="card-trip-infos">
             <div>
-            <h2><%= booking.tool.name%></h2>
-
-            <p>From <%= booking.start_date.strftime("%d-%m-%Y")%> to <%= booking.end_date.strftime("%d-%m-%Y")%></p>
+              <h2><%= link_to tool.name, tool_path(tool) %></h2>
+              <p><%= tool.description.truncate(150) %></p>
             </div>
-            <h2 class="card-trip-pricing">Total : <%=(booking.end_date - booking.start_date) * booking.tool.price%>€/day</h2>
-            <%= link_to "Valid this request", edit_booking_path(booking) %>
-
-
+            <div>
+              <h2 class="card-trip-pricing"><%= tool.price %><br>€/day</h2>
+            </div>
+          </div>
+          <div class="card-trip-infos-update-delete">
+            <div>
+              <%= link_to "Update", edit_tool_path(tool) %>
+            </div>
+            <div>
+              <%= link_to "Delete", tool_path(tool), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+            </div>
           </div>
         </div>
-    </div>
-        <% end %>
-   </div>
+      </div>
+    <% end %>
+  </div>
+</div>
 
 
-   <h1 class="tools-text-center">Reservation</h1>
 
+  <h1 class="tools-text-center">👷🏻 Manage your tool</h1>
 
-   <div class="cards">
-    <% @my_requests.each do |booking| %>
-    <div class="row align-items-center">
-        <div class="col">
+  <div class="cards-dashboard">
+  <div class="row align-items-center">
+    <% @bookings.each do |booking| %>
+      <div class="col-md-4">
         <div class="card-trip">
-
           <% if booking.tool.photo.attached? %>
-          <%= cl_image_tag booking.tool.photo.key, width: 400 %>
+            <%= cl_image_tag booking.tool.photo.key, width: 400 %>
           <% end %>
-          <div class="card-trip-infos">
+          <div class="card-trip-infos10">
             <div>
-            <h2><%= booking.tool.name%></h2>
-
-
-            <p>From <%= booking.start_date.strftime("%d-%m-%Y")%> to <%= booking.end_date.strftime("%d-%m-%Y")%></p>
+              <h2><%= booking.tool.name %></h2>
+              <p>From <%= booking.start_date.strftime("%d-%m-%Y") %><br>to <%= booking.end_date.strftime("%d-%m-%Y") %></p>
+            </div>
+            <div class="card-trip-infos2">
+              <div>
+                <h2 class="card-trip-pricing">Total : <%= (booking.end_date - booking.start_date) * booking.tool.price %>€/day</h2>
+              </div>
+            </div>
           </div>
-          <h2 class="card-trip-pricing">Total : <%=(booking.end_date - booking.start_date) * booking.tool.price%>€/day</h2>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
 
-          </div>
+
+
+   <h1 class="tools-text-center">🗓️ Reservation</h1>
+
+
+   <div class="cards-dashboard">
+  <div class="row align-items-center">
+    <% @my_requests.each do |booking| %>
+      <div class="col-md-4">
+        <div class="card-trip">
+          <% if booking.tool.photo.attached? %>
+            <%= cl_image_tag booking.tool.photo.key, width: 400 %>
+          <% end %>
+          <div class="card-trip-infos10">
+            <div>
+              <h2><%= booking.tool.name %></h2>
+              <p>From <%= booking.start_date.strftime("%d-%m-%Y") %><br>to <%= booking.end_date.strftime("%d-%m-%Y") %></p>
+            </div>
+
+
+            <div class="card-trip-infos2">
+              <div>
+                <h2 class="card-trip-pricing">Total : <%= (booking.end_date - booking.start_date) * booking.tool.price %>€/day</h2>
+              </div>
+            </div>
+        </div>
+
       </div>
+
+      <div class="btn-card-dashboard">
+        <%= link_to "Valid this request", edit_booking_path(booking), class: "validation-dashboard" %>
       </div>
-    </div>
-        <% end %>
-   </div>
+    <% end %>
+  </div>
+</div>
+
 
   <div class="btn-all-tools">
   <%= link_to "Add tool", new_tool_path %>
   </div>
+
+
+</div>
+</div>
 </div>

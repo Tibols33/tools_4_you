@@ -57,9 +57,11 @@
 <div class="row align-items-center">
     <div class="col">
     <div class="card-trip">
+
       <% if tool.photo.attached? %>
       <%= cl_image_tag tool.photo.key, width: 400 %>
       <% end %>
+
 
       <div class="card-trip-infos">
         <div>

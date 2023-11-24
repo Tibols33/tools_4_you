@@ -24,7 +24,8 @@
       <% end %>
    </div>
 
-  <h1 class="text-center">My Bookings</h1>
+
+  <h1 class="tools-text-center">My Bookings</h1>
 
   <div class="cards">
     <% @bookings.each do |booking| %>
@@ -37,9 +38,12 @@
           <div class="card-trip-infos">
             <div>
             <h2><%= booking.tool.name%></h2>
-            <p><%= booking.start_date%><%= booking.end_date%></p>
-          </div>
-          <h2 class="card-trip-pricing"><%= booking.tool.price %>€/day</h2>
+
+            <p>Du <%= booking.start_date.strftime("%d-%m-%Y")%> au <%= booking.end_date.strftime("%d-%m-%Y")%></p>
+            </div>
+            <h2 class="card-trip-pricing">Total dû : <%=(booking.end_date - booking.start_date) * booking.tool.price%>€/day</h2>
+            <%= link_to "Valider la demande", edit_booking_path(booking) %>
+
           </div>
       </div>
       </div>
@@ -47,7 +51,9 @@
         <% end %>
    </div>
 
-   <h1 class="text-center">My Requests</h1>
+
+   <h1 class="tools-text-center">My Requests</h1>
+
 
    <div class="cards">
     <% @my_requests.each do |booking| %>
@@ -61,9 +67,12 @@
           <div class="card-trip-infos">
             <div>
             <h2><%= booking.tool.name%></h2>
-            <p><%= booking.start_date%><%= booking.end_date%></p>
+
+
+            <p>Du <%= booking.start_date.strftime("%d-%m-%Y")%> au <%= booking.end_date.strftime("%d-%m-%Y")%></p>
           </div>
-          <h2 class="card-trip-pricing"><%= booking.tool.price %>€/day</h2>
+          <h2 class="card-trip-pricing">Total perçu : <%=(booking.end_date - booking.start_date) * booking.tool.price%>€/day</h2>
+
           </div>
       </div>
       </div>
@@ -75,6 +84,3 @@
   <%= link_to "Add tool", new_tool_path %>
   </div>
 </div>
-
-
-booked_tools

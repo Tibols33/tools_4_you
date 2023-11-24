@@ -39,21 +39,8 @@ padding-left: 30px;
 
 /* Validation */
 
-.btn-card-dashboard {
-
-}
-
-.validation-dashboard {
-  width: 235px;
-  height: 66px;
-  background-color: #493aff;
-  color: #fff !important;
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  margin-top: 25px;
+.validation {
+  margin-top: -15px;
 }
 
 /* cards */
@@ -129,10 +116,10 @@ padding-left: 30px;
 
 .confirmed{
   color:rgb(58, 196, 58);
-  padding: 10px;
+  padding-bottom: 15px;
 }
 
 .reject{
   color:red;
-  padding: 10px;
+  padding-bottom: 15px;
 }

@@ -19,7 +19,7 @@
               <p><%= tool.description.truncate(150) %></p>
             </div>
             <div>
-              <h2 class="card-trip-pricing"><%= tool.price %><br>€ / day</h2>
+              <h2 class="card-trip-pricing"><%= tool.price %>€<br>/day</h2>
             </div>
           </div>
           <div class="card-trip-infos-update-delete">
@@ -87,9 +87,6 @@
             <div class="card-trip-infos2">
               <div>
                 <h2 class="card-trip-pricing">Total : <%= (booking.end_date - booking.start_date) * booking.tool.price %>€</h2>
-              </div>
-            </div>
-        </div>
           <div class="validation">
          <% if booking.status === "confirmed"%>
               <h2 class="confirmed"><%= "Confirmed" %></h2>
@@ -99,6 +96,9 @@
               <%= link_to "Valid this request", edit_booking_path(booking) %>
             <% end %>
 
+        </div>
+              </div>
+            </div>
         </div>
 
       </div>

@@ -4,20 +4,10 @@ class ToolsController < ApplicationController
 
   def index
     @tools = Tool.all
-    if params[:query].present?
-      sql_subquery = <<~SQL
-        tools.name @@ :query
-        OR tools.description @@ :query
-      SQL
-      @tools = @tools.joins(:user).where(sql_subquery, query: params[:query])
-    end
   end
 
   def show
     @tool = Tool.find(params[:id])
-    @booking_dates = Booking.where(tool: @tool).pluck(:start_date, :end_date).map do |dates|
-      { from: dates[0], to: dates[1] }
-    end
     @booking = Booking.new
     @markers = [{
         lat: @tool.latitude,

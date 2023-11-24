@@ -4,6 +4,13 @@ class ToolsController < ApplicationController
 
   def index
     @tools = Tool.all
+    if params[:query].present?
+      sql_subquery = <<~SQL
+        tools.name @@ :query
+        OR tools.description @@ :query
+      SQL
+      @tools = @tools.joins(:user).where(sql_subquery, query: params[:query])
+    end
   end
 
   def show

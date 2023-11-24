@@ -324,6 +324,25 @@
   background-color: #06113c;
 }
 
+.form-control {
+  border-radius: 10px 0px 0px 10px;
+  border-color: #493aff;
+}
+
+.btn-primary {
+  background-color: #493aff;
+  color: #fff !important;
+  border: none;
+  border-radius: 0px 10px 10px 0px;
+  padding-left: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 60px;
+}
+
+.btn-primary:hover {
+  background-color: #02206d;
+}
 
 /* Encart index */
 

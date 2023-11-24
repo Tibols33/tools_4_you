@@ -90,20 +90,20 @@
               </div>
             </div>
         </div>
-
-
-      </div>
-
-      <div class="btn-card-dashboard">
+          <div class="validation">
          <% if booking.status === "confirmed"%>
-              <%= booking.status %>
+              <h2 class="confirmed"><%= "Confirmed" %></h2>
             <% elsif booking.status === "refused"%>
-              <%= "Reject" %>
+              <h2 class="reject"><%= "Reject" %></h2>
             <% else booking.status === "waiting"%>
               <%= link_to "Valid this request", edit_booking_path(booking) %>
             <% end %>
 
         </div>
+
+      </div>
+
+
 
       </div>
     <% end %>

@@ -37,6 +37,7 @@
 }
 
 
+
 .header .text-wrapper {
   position: absolute;
   top: 17px;
@@ -255,6 +256,7 @@
   font-size: 50px;
 }
 
+
 .container .banner-text-center {
   display: flex;
   justify-content: center;
@@ -355,6 +357,13 @@
   margin-bottom: 150px;
 }
 
+.box .overlap-group3 {
+  position: relative;
+  width: 1512px;
+  height: 342px;
+  background-color: #E5F2FF;
+}
+
 .box .overlap {
   position: absolute;
   width: 538px;
@@ -451,4 +460,8 @@
   top: 106px;
   left: 372px;
   object-fit: cover;
+}
+
+.card-trip img {
+  filter: brightness(65%);
 }

@@ -34,6 +34,7 @@
       </div>
     </div>
 
+<div class="background-homepage">
 <div class="tools-text-center">
   <p>Tools<p>
 </div>
@@ -56,7 +57,12 @@
 <div class="row align-items-center">
     <div class="col">
     <div class="card-trip">
-      <%= image_tag "img-tools1.png" %>
+
+      <% if tool.photo.attached? %>
+      <%= cl_image_tag tool.photo.key, width: 400 %>
+      <% end %>
+
+
       <div class="card-trip-infos">
         <div>
         <h2><%= link_to tool.name, tool_path(tool) %></h2>
@@ -72,4 +78,5 @@
 
 <div class="btn-all-tools">
 <%= link_to "All tools", tools_path %>
+</div>
 </div>

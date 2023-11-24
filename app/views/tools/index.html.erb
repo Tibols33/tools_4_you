@@ -1,8 +1,19 @@
-<div class="banner" style="background-image: url('<%= asset_path('background-to-change.png') %>');">
-  <div class="container">
-    <p class="banner-text-center">All tools on Rent 4 You</p>
-  </div>
-</div>
+
+<div class="box">
+      <div class="group">
+        <div class="overlap-group3">
+          <div class="overlap">
+            <p class="text-wrapper">All tools to rent</p>
+            <p class="div">Find the tool you need for your home!</p>
+          </div>
+            <%= link_to "", class: "img-banner2" do %>
+            <%= image_tag "image-index2.png" %>
+            <% end %>
+        </div>
+      </div>
+    </div>
+
+
 
 <div class="cards">
 <% @tools.each do |tool| %>
@@ -41,7 +52,7 @@
           </div>
             <%= link_to "Rent my owner tools", new_tool_path, class: "text-wrapper-2" %>
             <%= link_to "", class: "img-banner2" do %>
-            <%= image_tag "img-index.png" %>
+            <%= image_tag "image-index2.png" %>
             <% end %>
         </div>
       </div>

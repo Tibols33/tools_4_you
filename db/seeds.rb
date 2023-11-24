@@ -10,7 +10,7 @@
 Tool.destroy_all
 User.destroy_all
 
-User.create!(email: "admin@hotmail.fr" , password: "azerty", password_confirmation: "azerty", first_name: "best", last_name: "admin" )
+User.create!(email: "admin@hotmail.fr" , password: "azerty", password_confirmation: "azerty", first_name: "Administrator", last_name: "admin" )
 
 user1 = User.create!(email: "rene@hotmail.fr" , password: "baby21", password_confirmation: "baby21", first_name: "René", last_name: "DUBOIN" )
 
@@ -19,7 +19,7 @@ tool1 = Tool.new(name: "Brouette custom max", description: "Je mets en location 
 tool1.photo.attach(io: file, filename: "renelabrouette.jpg", content_type: "image/jpg")
 tool1.save
 
-user2 = User.create!(email: "jean@hotmail.fr" , password: "baoby21", password_confirmation: "baoby21", first_name: "Jacques", last_name: "JEAN" )
+user2 = User.create!(email: "jean@hotmail.fr" , password: "baoby21", password_confirmation: "baoby21", first_name: "Jean", last_name: "JEAN" )
 
 file = File.open("app/assets/images/marteau1.jpg")
 tool2 = Tool.new(name: "Marteau Uru", description: "Il a une tête carrée et une poignée courte. On dit qu'il a été forgé par des nains à partir d'un métal magique appelé Uru. Ce marteau est très puissant et a des pouvoirs magiques. Thor, le dieu nordique, peut le lancer loin, et il revient toujours dans sa main. Seul Thor, s'il est digne, peut le soulever. Parfait pour régler vos problèmes de voisinage", address: "Meritullinkatu 10 00170 Helsinki", price: 11, user: user2  )

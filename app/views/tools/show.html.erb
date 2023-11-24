@@ -11,7 +11,7 @@
 
             <div class="text-left">
               <p class="title-show"><%= @tool.name %></p>
-              <p class="subline"> Annonce mise en ligne le : <%= @tool.created_at %> </p>
+              <p class="subline"> Published at : <%= @tool.created_at %> </p>
               <p class="div"><%= @tool.description  %></p>
               <p class="text-wrapper-2"><%= @tool.price %> €/day</p>
           <div class="text-wrapper-show"> <%= link_to "🛒 Add a cart", new_tool_booking_path(@tool) %></div>

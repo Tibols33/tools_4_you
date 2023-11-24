@@ -1,8 +1,6 @@
  # This file should ensure the existence of records required to run the application in every environment (production,
 # development, test). The code here should be idempotent so that it can be executed at any point in every environment.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-
-require 'pry-byebug'
 #
 # Example:
 #
@@ -15,7 +13,7 @@ User.destroy_all
 User.create!(email: "admin@hotmail.fr" , password: "azerty", password_confirmation: "azerty", first_name: "best", last_name: "admin" )
 
 user1 = User.create!(email: "rene@hotmail.fr" , password: "baby21", password_confirmation: "baby21", first_name: "René", last_name: "DUBOIN" )
- 
+
 file = File.open("app/assets/images/renelabrouette.jpg")
 tool1 = Tool.new(name: "Brouette custom max", description: "Je mets en location la brouette de mon oncle Pierro. Moteur 125cc, sortie double pots, plus efficace que les gros bras de tonton bernard. Elle fera rougir vos tomates et épatera votre voisine. Me contacter rapidement car beaucoup de demandes. ", address: "Les ecuries de Montcarra, 100 Imp. Bidaud, 38890 Montcarra", price: 15, user: user1)
 tool1.photo.attach(io: file, filename: "renelabrouette.jpg", content_type: "image/jpg")

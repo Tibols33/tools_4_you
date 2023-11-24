@@ -56,6 +56,7 @@
             <div class="card-trip-infos2">
               <div>
                 <h2 class="card-trip-pricing">Total : <%= (booking.end_date - booking.start_date) * booking.tool.price %>€/day</h2>
+                 <h2><%= booking.status%></h2>
               </div>
             </div>
           </div>
@@ -83,8 +84,6 @@
               <h2><%= booking.tool.name %></h2>
               <p>From <%= booking.start_date.strftime("%d-%m-%Y") %><br>to <%= booking.end_date.strftime("%d-%m-%Y") %></p>
             </div>
-
-
             <div class="card-trip-infos2">
               <div>
                 <h2 class="card-trip-pricing">Total : <%= (booking.end_date - booking.start_date) * booking.tool.price %>€/day</h2>
@@ -92,10 +91,20 @@
             </div>
         </div>
 
+
       </div>
 
       <div class="btn-card-dashboard">
-        <%= link_to "Valid this request", edit_booking_path(booking), class: "validation-dashboard" %>
+         <% if booking.status === "confirmed"%>
+              <%= booking.status %>
+            <% elsif booking.status === "refused"%>
+              <%= "Reject" %>
+            <% else booking.status === "waiting"%>
+              <%= link_to "Valid this request", edit_booking_path(booking) %>
+            <% end %>
+        
+        </div>
+        
       </div>
     <% end %>
   </div>

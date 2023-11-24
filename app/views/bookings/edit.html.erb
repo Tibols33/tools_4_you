@@ -5,12 +5,9 @@
 
   <div class="container">
     <h1> Edit Booking</h1>
-
-
     <%= simple_form_for [@booking] do |f| %>
       <%= f.input :status, collection: %w(confirmed refused waiting) %>
       <%= f.submit "Submit status", class: "btn-menu-login mt-3" %>
-      <%= render "shared/flashes" %>
     <% end %>
   </div>
 </div>

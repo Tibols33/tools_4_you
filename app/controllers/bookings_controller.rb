@@ -19,13 +19,13 @@ class BookingsController < ApplicationController
   end
 
   def edit
-    @booking = booking.find(params[:id])
+    @booking = Booking.find(params[:id])
   end
 
   def update
     @booking = Booking.find(params[:id])
     if @booking.update(booking_params)
-      redirect_to booking_path(@booking.id)
+      redirect_to profile_path
     else
       render :edit, status: :unprocessable_entity
     end

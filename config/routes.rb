@@ -11,7 +11,8 @@ Rails.application.routes.draw do
   resources :tools do
   # Defines the root path route ("/")
   # root "posts#index"
-    resources :bookings, only: [:new, :create]
+    resources :bookings, only: [:create]
+    # "post '/tools/:tool_id/bookings, to: 'bookings#create'"
   end
     resources :bookings, only: [:delete, :update, :edit, :show, :index]
 
